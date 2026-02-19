@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>building-1</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #ffffff;
+    }
+
+    /* Parent container */
+    .image-container {
+      position: relative;      /* 🔑 anchor for absolute children */
+      max-width: 1444px;
+      margin: 0 auto;
+    }
+
+    /* Main image */
+    .image-container img {
+      display: block;
+      width: 100%;             /* 🔑 fill container */
+      height: auto;
+    }
+
+    /* Clickable overlays */
+    .link {
+      position: absolute;
+      display: block;
+      /* background: rgba(138, 43, 226, 0.3); */
+    }
+
+    /* Example clickable areas (percent-based) */
+    .link-1 {
+      top: 82.3%;
+      left: 15%;
+      width: 70%;
+      height: 0.7%;
+    }
+
+    .link-2 {
+      top: 83.9%;
+      left: 15%;
+      width: 70%;
+      height: 0.7%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="image-container">
+    <img src="images/building.png" alt="Building layout">
+
+    <!-- Clickable areas -->
+    <a
+      href="https://talktosema.org/wp-content/uploads/2026/01/SEMA-Impact-Measurement-Report-.pdf"
+      class="link link-1"
+      aria-label="Download SEMA Impact Measurement Report"
+    ></a>
+
+    <a
+      href="https://talktosema.org/wp-content/uploads/2026/02/Refugee-report-.pdf"
+      class="link link-2"
+      aria-label="Refugee report"
+    ></a>
+  </div>
+</body>
+</html>
